@@ -63,7 +63,7 @@ public class EmpDemo {
 			
 			skills.forEach(System.out.println);
 			
-			
+			         
 		}
 		
 		session.close();
