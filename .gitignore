@@ -1,0 +1,8 @@
+# Eclipse / Java project ignores
+bin/
+target/
+.metadata/
+.settings/
+.classpath
+.project
+
