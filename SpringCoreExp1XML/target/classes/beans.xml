@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	
+	<bean id = "bd1" class="com.test.BookDetails">
+
+		<property name="pages" value="650"></property>
+		<property name="publisher" value="RamMatt"></property>
+		<property name="year" value="2023"></property>
+		
+	</bean>
+	
+	
+	<bean id="bd2" class ="com.test.BookDetails">
+	
+		<property name="pages" value="450"></property>
+		<property name="publisher" value="Isckon Temple"></property>
+		<property name="year" value="2026"></property>
+	
+	</bean>
+
+	<bean id = "bk" class="com.test.Book" scope="singleton" autowire="default">
+		
+		<property name="id" value="101"></property>
+		<property name="name" value="Java Notes"></property>
+		<property name="author" value="Rohit"></property>
+		<property name="price" value="234"></property>
+		<property name="listbd" >
+			<list>
+				<ref bean="bd1"></ref>
+				<ref bean="bd2"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+
+</beans>
+
+<!-- Interview Questions -->
+<!-- What is the default bean score in Spring Framework -> ANS(Singleton) -->
+<!-- prototype -->
+<!-- Session Scope, but related to Https Request in Servlet in Java -->
+<!-- What is bean scope and what is AutoWiring? -->

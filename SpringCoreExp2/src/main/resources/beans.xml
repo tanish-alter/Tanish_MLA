@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	
+	<bean id = "adr1" class="com.test.Address">
+		<constructor-arg name="city" value="tirupati"></constructor-arg>
+		<constructor-arg name="state" value="TG"></constructor-arg>
+		<constructor-arg name="country" value="IND"></constructor-arg>
+	
+	</bean>
+	
+	
+	<bean id = "cst1" class="com.test.Customer">
+		<constructor-arg name="id" value="02"></constructor-arg>
+		<constructor-arg name="name" value="ROHIT"></constructor-arg>
+		<constructor-arg name="adr" value="HUBLI"></constructor-arg>
+	
+	</bean>
+	
+	<bean id = "adr" class="com.test.Address">
+
+		<property name="city" value="HYD"></property>
+		<property name="state" value="Telangana"></property>
+		<property name="country" value="INDIA"></property>
+		
+	</bean>
+	
+ 	
+	<bean id="cst" class ="com.test.Customer">
+	
+		<property name="id" value="01"></property>
+		<property name="name" value="Virat"></property>
+		<property name="adr" value="Delhi"></property>
+	
+	</bean>
+
+
+</beans>
+
