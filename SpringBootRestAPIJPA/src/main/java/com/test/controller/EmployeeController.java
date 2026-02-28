@@ -84,7 +84,7 @@ public class EmployeeController {
 		}
 	}
 	
-	@DeleteMapping(value="/{id}", consumes = "application/json")
+	@DeleteMapping(value="/{id}", produces = "application/json")
 	public ResponseEntity <List<Employee>> deleteEmployeeById(@PathVariable int id){
 		
 		List<Employee> list = service.deleteEmployeeById(id);
